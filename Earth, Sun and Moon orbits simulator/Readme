@@ -1,0 +1,71 @@
+This project is a high-performance 3D Gravity Simulator built using C++ and OpenGL. It combines classical Newtonian physics with visual representations of General Relativity, allowing users to spawn celestial bodies and observe how they interact and warp the fabric of spacetime.
+
+## Features
+
+* Real-time Gravity Simulation: Uses Newtonian gravitational laws to calculate interactions between multiple bodies based on mass, distance, and velocity.
+* General Relativity Visualization: Dynamically deforms a 3D grid using the Schwarzschild radius formula to visualize gravitational wells.
+* Dynamic Object Creation:
+* Left Click: Spawn a new celestial body.
+* Right Click (Hold): Increase the mass of the object during initialization.
+* Launch: Release the mouse to set the object in motion.
+
+
+* Advanced Rendering:
+* Glow Shaders: High-mass objects (stars) utilize a specialized fragment shader to simulate thermal radiation/glow.
+* Smooth Lighting: Sphere objects feature normalized vector lighting for a realistic 3D appearance.
+
+
+* Interactive Camera: Full 6-degrees-of-freedom camera movement with adjustable sensitivity and zoom.
+
+## Tech Stack
+
+* Language: C++
+* Graphics API: OpenGL (Modern 330 core profile)
+* Windowing and Input: GLFW
+* Extension Loader: GLEW
+* Mathematics: GLM (OpenGL Mathematics)
+
+## Controls
+
+ Key / Mouse                        Action 
+
+ W / A / S / D                      Standard FPS-style movement 
+ Space / L-Shift                    Vertical ascent and descent 
+ Mouse Movement                     Look around (Pitch/Yaw) 
+ Scroll Wheel                       Fast camera zoom 
+ Left Click                         Hold to spawn; Release to launch 
+ Right Click                        Increase mass while spawning 
+ K Key                              Toggle Simulation Pause 
+ Q Key                              Exit Application 
+
+## Installation and Build
+
+### Prerequisites
+
+Ensure you have the following libraries installed on your system:
+
+* GLEW
+* GLFW3
+* GLM
+
+### Building with GCC/Clang
+
+bash
+g++ main.cpp -o gravity_sim -lGL -lGLEW -lglfw -lGLU
+./gravity_sim
+
+
+
+## The Physics Behind the Code
+
+The simulator uses a custom Object class to track physical properties. Spacetime curvature is calculated on the CPU by iterating through every grid vertex and applying a vertical displacement based on the proximity and mass of nearby objects.
+
+Note: For educational purposes, the sizeRatio and gravitational constant G are scaled to allow for observable orbits and "deep" spacetime wells within a standard window view.
+
+## Contributing
+
+Feel free to fork this repository and submit pull requests. Future planned features include:
+
+* Compute Shader Integration: Moving grid deformation to the GPU for performance gains.
+* Trail System: Visualizing the orbital paths of planets over time.
+* Texture Support: Applying realistic surface textures to planets and stars.
