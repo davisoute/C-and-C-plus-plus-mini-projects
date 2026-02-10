@@ -1,6 +1,6 @@
 This project is a high-performance 3D Gravity Simulator built using C++ and OpenGL. It combines classical Newtonian physics with visual representations of General Relativity, allowing users to spawn celestial bodies and observe how they interact and warp the fabric of spacetime.
 
-## Features
+Features
 
 * Real-time Gravity Simulation: Uses Newtonian gravitational laws to calculate interactions between multiple bodies based on mass, distance, and velocity.
 * General Relativity Visualization: Dynamically deforms a 3D grid using the Schwarzschild radius formula to visualize gravitational wells.
@@ -17,7 +17,7 @@ This project is a high-performance 3D Gravity Simulator built using C++ and Open
 
 * Interactive Camera: Full 6-degrees-of-freedom camera movement with adjustable sensitivity and zoom.
 
-## Tech Stack
+Tech Stack
 
 * Language: C++
 * Graphics API: OpenGL (Modern 330 core profile)
@@ -25,7 +25,7 @@ This project is a high-performance 3D Gravity Simulator built using C++ and Open
 * Extension Loader: GLEW
 * Mathematics: GLM (OpenGL Mathematics)
 
-## Controls
+Controls
 
  Key / Mouse                        Action 
 
@@ -38,9 +38,9 @@ This project is a high-performance 3D Gravity Simulator built using C++ and Open
  K Key                              Toggle Simulation Pause 
  Q Key                              Exit Application 
 
-## Installation and Build
+Installation and Build
 
-### Prerequisites
+Prerequisites
 
 Ensure you have the following libraries installed on your system:
 
@@ -48,7 +48,7 @@ Ensure you have the following libraries installed on your system:
 * GLFW3
 * GLM
 
-### Building with GCC/Clang
+Building with GCC/Clang
 
 bash
 g++ main.cpp -o gravity_sim -lGL -lGLEW -lglfw -lGLU
@@ -56,13 +56,13 @@ g++ main.cpp -o gravity_sim -lGL -lGLEW -lglfw -lGLU
 
 
 
-## The Physics Behind the Code
+The Physics Behind the Code
 
 The simulator uses a custom Object class to track physical properties. Spacetime curvature is calculated on the CPU by iterating through every grid vertex and applying a vertical displacement based on the proximity and mass of nearby objects.
 
 Note: For educational purposes, the sizeRatio and gravitational constant G are scaled to allow for observable orbits and "deep" spacetime wells within a standard window view.
 
-## Contributing
+Contributing
 
 Feel free to fork this repository and submit pull requests. Future planned features include:
 
