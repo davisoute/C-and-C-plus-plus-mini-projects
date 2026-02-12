@@ -1,4 +1,4 @@
-This project is a high-performance 3D Gravity Simulator built using C++ and OpenGL. It combines classical Newtonian physics with visual representations of General Relativity, allowing users to spawn celestial bodies and observe how they interact and warp the fabric of spacetime.
+This project is an intermediate 3D Gravity Simulator built using C++ and OpenGL. It combines classical Newtonian physics with visual representations of General Relativity, allowing users to spawn celestial bodies and observe how they interact and warp the fabric of spacetime.
 
 Features
 
