@@ -55,7 +55,6 @@ g++ main.cpp -o gravity_sim -lGL -lGLEW -lglfw -lGLU
 ./gravity_sim
 
 
-
 The Physics Behind the Code
 
 The simulator uses a custom Object class to track physical properties. Spacetime curvature is calculated on the CPU by iterating through every grid vertex and applying a vertical displacement based on the proximity and mass of nearby objects.
